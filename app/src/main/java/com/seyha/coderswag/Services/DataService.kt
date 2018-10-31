@@ -24,11 +24,27 @@ object DataService {
             Product("Deslopes Graphic Beenie","$18", "hat1"),
             Product("Deslopes Hat Black","$20", "hat2"),
             Product("Deslopes Hat White","$18", "hat3"),
+            Product("Deslopes Hat Snapback","$22", "hat4"),
+            Product("Deslopes Graphic Beenie","$18", "hat1"),
+            Product("Deslopes Hat Black","$20", "hat2"),
+            Product("Deslopes Hat White","$18", "hat3"),
+            Product("Deslopes Hat Snapback","$22", "hat4"),
+            Product("Deslopes Graphic Beenie","$18", "hat1"),
+            Product("Deslopes Hat Black","$20", "hat2"),
+            Product("Deslopes Hat White","$18", "hat3"),
             Product("Deslopes Hat Snapback","$22", "hat4")
     )
 
 
     val hoodie = listOf(
+            Product("Deslopes Hoodie Gray","$28", "hoodie1"),
+            Product("Deslopes Hoodie Red","$32", "hoodie2"),
+            Product("Deslopes Gray Hoodie","$28", "hoodie3"),
+            Product("Deslopes Black Hoodie","$32", "hoodie4"),
+            Product("Deslopes Hoodie Gray","$28", "hoodie1"),
+            Product("Deslopes Hoodie Red","$32", "hoodie2"),
+            Product("Deslopes Gray Hoodie","$28", "hoodie3"),
+            Product("Deslopes Black Hoodie","$32", "hoodie4"),
             Product("Deslopes Hoodie Gray","$28", "hoodie1"),
             Product("Deslopes Hoodie Red","$32", "hoodie2"),
             Product("Deslopes Gray Hoodie","$28", "hoodie3"),
@@ -40,6 +56,27 @@ object DataService {
             Product("Deslopes Bage Light Gray","$20", "shirt2"),
             Product("Deslopes Logo Shirt Red","$22", "shirt3"),
             Product("Deslopes Hustle","$22", "shirt4"),
+            Product("Kickflip Studio","$18", "shirt5"),
+            Product("Deslopes Shirt Black","$18", "shirt1"),
+            Product("Deslopes Bage Light Gray","$20", "shirt2"),
+            Product("Deslopes Logo Shirt Red","$22", "shirt3"),
+            Product("Deslopes Hustle","$22", "shirt4"),
+            Product("Kickflip Studio","$18", "shirt5"),
+            Product("Deslopes Shirt Black","$18", "shirt1"),
+            Product("Deslopes Bage Light Gray","$20", "shirt2"),
+            Product("Deslopes Logo Shirt Red","$22", "shirt3"),
+            Product("Deslopes Hustle","$22", "shirt4"),
             Product("Kickflip Studio","$18", "shirt5")
     )
+
+    val digitalFood = listOf<Product>()
+
+    fun getProductByCategory(category: Category): List<Product> {
+        return when(category.title) {
+            "SHIRTS" -> shirts
+            "HOODIES" -> hoodie
+            "HATS" -> hats
+            else -> digitalFood
+        }
+    }
 }
